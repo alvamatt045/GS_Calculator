@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="62dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/numTotalRoll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTotalRolls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:text="Total Rolls"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/txtLimitedRolls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="14dp"
+        android:text="Limited Banner Rolls"
+        app:layout_constraintBottom_toTopOf="@+id/numLimitedRoll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numTotalRoll" />
+
+    <TextView
+        android:id="@+id/txtStandardRoll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Standard Banner Rolls"
+        app:layout_constraintBottom_toTopOf="@+id/numStandardRoll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numLimitedRoll" />
+
+    <TextView
+        android:id="@+id/txtInterFate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="3dp"
+        android:text="Intertwined Fate"
+        app:layout_constraintBottom_toTopOf="@+id/numIntFate"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtAcquaint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="3dp"
+        android:text="Aquaint Fate"
+        app:layout_constraintBottom_toTopOf="@+id/numAquaint"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtPrimo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:text="Primogems"
+        app:layout_constraintBottom_toTopOf="@+id/numPrimo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtGenesis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:text="Genesis Crystals"
+        app:layout_constraintBottom_toTopOf="@+id/numGenesis"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtStarglitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:text="Masterless Starglitter"
+        app:layout_constraintBottom_toTopOf="@+id/numGlitter"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/numTotalRoll"
+        android:layout_width="364dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="13dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="TextView"
+        android:hint="Total Rolls"
+        app:layout_constraintBottom_toTopOf="@+id/txtLimitedRolls"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/numLimitedRoll"
+        android:layout_width="364dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="18dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="TextView"
+        android:hint="Total Rolls"
+        app:layout_constraintBottom_toTopOf="@+id/txtStandardRoll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLimitedRolls" />
+
+    <TextView
+        android:id="@+id/numStandardRoll"
+        android:layout_width="355dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="339dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Total Rolls"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtStandardRoll" />
+
+    <EditText
+        android:id="@+id/numIntFate"
+        android:layout_width="172dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numStandardRoll" />
+
+    <EditText
+        android:id="@+id/numAquaint"
+        android:layout_width="172dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numIntFate" />
+
+    <EditText
+        android:id="@+id/numPrimo"
+        android:layout_width="173dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numAquaint" />
+
+    <EditText
+        android:id="@+id/numGenesis"
+        android:layout_width="174dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numPrimo" />
+
+    <EditText
+        android:id="@+id/numGlitter"
+        android:layout_width="178dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numGenesis" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="295dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:outlineProvider="paddedBounds"
+        android:text="Genshin Impact Gacha Simulator"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/calcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="240dp"
+        android:onClick="onClick"
+        android:text="CALCULATE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toEndOf="@+id/txtStarglitter"
+        app:layout_constraintTop_toBottomOf="@+id/numStandardRoll" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
