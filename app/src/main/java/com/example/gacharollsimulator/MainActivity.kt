@@ -3,18 +3,11 @@ package com.example.gacharollsimulator
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 
-class MainActivity() : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
-
-    val valIntFate: TextView = findViewById<TextView>(R.id.numIntFate)
-    val valAquaint: TextView = findViewById<TextView>(R.id.numAquaint)
-    val valPrimo: TextView = findViewById<TextView>(R.id.numPrimo)
-    val valGenesis: TextView = findViewById<TextView>(R.id.numGenesis)
-    var valGlitter: TextView = findViewById<TextView>(R.id.numGlitter)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,47 +16,59 @@ class MainActivity() : AppCompatActivity(), View.OnClickListener {
 
     }
     override fun onClick(v: View?) {
-        Toast.makeText(this, "You clicked $v", Toast.LENGTH_SHORT).show()
+        updateRolls()
     }
 
-    /*
-    fun setTotalText(){
-        var totalRoll: TextView = findViewById<TextView>(R.id.numTotalRoll)
-        totalRoll.text = calculateTotal().toString()
+    private fun getForTotal(intFate: Int, aqFate :Int, primo: Int,genesis: Int,star: Int): Int
+    {
+        return intFate + aqFate + (primo/160) + (genesis/160) + (star/5)
     }
-    fun setLimitedText(){
-        var limitedRoll: TextView = findViewById<TextView>(R.id.numLimitedRoll)
-        limitedRoll.text = calculateLimited().toString()
-    }
-    fun setStandardText(){
-        var standardRoll: TextView = findViewById<TextView>(R.id.numStandardRoll)
-        standardRoll.text = calculateStandard().toString()
+    private fun getForLimited(intFate: Int,primo: Int,genesis: Int,star: Int): Int
+    {
+        return intFate + (primo/160) + (genesis/160) + (star/5)
     }
 
-    fun calculateTotal(): Int {
-        return (valIntFate.text.toString().toInt()) +
-                (valPrimo.text.toString().toInt() / 160) +
-                (valGenesis.text.toString().toInt() / 160) +
-                (valGlitter.text.toString().toInt() / 5) +
-                (valAquaint.text.toString().toInt() / 5)
+    private fun getForStandard(aqFate :Int,primo: Int, genesis: Int, star: Int): Int
+    {
+        return  aqFate + (primo/160) + (genesis/160) + (star/5)
     }
-    fun calculateLimited(): Int {
+    private fun updateRolls() {
+        val curr: TextView = findViewById(R.id.numIntFate)
+        val a = curr.text.toString().toInt()
+        val curr2: TextView = findViewById(R.id.numAquaint)
+        val b = curr2.text.toString().toInt()
+        val curr3: TextView = findViewById(R.id.numPrimo)
+        val c = curr3.text.toString().toInt()
+        val curr4: TextView = findViewById(R.id.numGenesis)
+        val d = curr4.text.toString().toInt()
+        val curr5: TextView = findViewById(R.id.numGlitter)
+        val e = curr5.text.toString().toInt()
 
-        return (valIntFate.text.toString().toInt()) +
-                (valPrimo.text.toString().toInt() / 160) +
-                (valGenesis.text.toString().toInt() / 160) +
-                (valGlitter.text.toString().toInt() / 5)
+
+        updateLimitedResult(getForLimited(a,c,d,e).toString())
+        updateStandardResult(getForStandard(b,c,d,e).toString())
+        updateTotalResult(getForTotal(a,b,c,d,e).toString())
+
+
     }
-    fun calculateStandard(): Int {
-
-
-        return (valAquaint.text.toString().toInt()) +
-                (valPrimo.text.toString().toInt() / 160) +
-                (valGenesis.text.toString().toInt() / 160) +
-                (valGlitter.text.toString().toInt() / 5)
+     private fun updateLimitedResult(toThis: String?) {
+        val result: TextView = findViewById(R.id.numLimitedRoll)
+        result.text = toThis
+    }
+     private fun updateStandardResult(toThis: String?) {
+        val result: TextView = findViewById(R.id.numStandardRoll)
+        result.text = toThis
+    }
+    private fun updateTotalResult(toThis: String?) {
+        val result: TextView = findViewById(R.id.numTotalRoll)
+        result.text = toThis
     }
 
-    */
+
+
+
+
+
 
     }
 
